@@ -1,0 +1,13 @@
+
+<div *ngIf="isLoggedIn && isLoggedIn != undefined" class="sidebar" data-background-color="white" data-active-color="danger">
+        <app-navigation></app-navigation>
+    </div>
+<div *ngIf="!isLoggedIn && isLoggedIn != undefined" class="loginPage-cls"><app-login-page></app-login-page></div>
+<div *ngIf= "isInitial && isLoggedIn == undefined && isTerms == undefined"><app-voicx-slash></app-voicx-slash></div>
+
+<div *ngIf= "isTerms && isLoggedIn == undefined && isInitial == undefined  && isPrivacy == undefined "><app-terms></app-terms></div>
+
+<div *ngIf= "isPrivacy && isTerms == undefined && isLoggedIn == undefined && isInitial == undefined "><app-privacy></app-privacy></div>
+
+
+    
